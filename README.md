@@ -26,7 +26,7 @@ This movie recommendation system recommend the movie based on user search and us
 
 **Server:** Flask
 
-**Language Used:** Python Javascript
+**Language Used:** Python 
 
 **Flask libraries:** Flask-login, Flask-WTform, flask_sqlalchemy
 
