@@ -1,0 +1,29 @@
+     
+*{
+    margin: 0;
+    padding: 0;    
+}
+body{
+    background-image:url('img2.jpeg');
+    text-align: center;
+    font-family:sans-serif;
+}
+h1{
+    font-weight:bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(75, 70, 70);
+}
+.submit-btn{
+ justify-content: center;
+}
+.movie-selection-box
+{
+ padding-left:50px;
+ padding-right:50px;
+ padding-top:100px; 
+}
+.searching-bar{
+    margin-top:25px ;
+    margin-bottom:25px ;
+    
+} 

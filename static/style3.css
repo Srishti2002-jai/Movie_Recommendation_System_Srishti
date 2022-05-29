@@ -1,0 +1,67 @@
+.rate-area{
+	float: left;
+	border-style: none;
+}
+
+.rate-area:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+	clip: rect(0, 0, 0, 0);
+}
+
+.rate-area:not(:checked) > label {
+	float: right;
+	width: 0.8em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 180%;
+	color: lightgrey;
+}
+
+.rate-area:not(:checked) > label:before {
+	content: "★";
+}
+
+.rate-area > input:checked ~ label {
+	color: gold;
+}
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area> input:checked ~ label:hover,
+.rate-area> input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
+.rating-container{
+	padding-top:50px;
+	padding-left:25px;
+}
+.card{
+	padding-top:8px;
+} 
+*{
+    margin: 0;
+    padding: 0;
+      }
+      body{
+        background-color:rgb(112, 63, 63);
+      }
+      .card{
+        margin-top: 8px;
+        padding-top: 10px;
+        border-radius: 2%;
+        border-width :5px;;
+      }
+      h3{
+        margin:10px;
+        text-align: center;
+        color:white;
+        text-shadow: 2px 2px 5px rgb(75, 70, 70);
+      }

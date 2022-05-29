@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="/static/style.css">
+<body>
+{% endblock body %}
+{% block content %}
+    <div class="background-container">
+    <div class="card"style="width: 25rem;margin-top: 8%; margin-left:9%;">
+    <div class="card-body"style="background-color:rgb(175, 172, 172);">
+    <div class="Register">
+      <h1 class="card-title">Register</h1>
+    <form method="POST">
+      {{form.hidden_tag()}}
+      <div class="mb-3">
+        {{form.username.label(class="form-label")}}
+        {{form.username(class="form-control")}}
+      </div>
+      <div class="mb-3">
+        {{form.email.label(class="form-label")}}
+        {{form.email(class="form-control",type="email")}}
+      </div>
+      <div class="mb-3">
+        {{form.password.label( class="form-label")}}
+      {{form.password(class="form-control")}}
+      </div>
+      
+      {% for message in get_flashed_messages() %}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  {{ message }}
+	  <button type="button" class="btn-close"data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+      {% endfor %}
+
+      {{form.submit(class="btn btn-outline-dark Reg-btn")}}
+      </form>
+      <h3>Have an account login</h3>
+      <a href="{{url_for('login')}}"class="btn btn-outline-dark">login</a>
+    </div> 
+  </div>
+</div>
+</div>
+</body>
+</html>
+</head>
+{% endblock content %}

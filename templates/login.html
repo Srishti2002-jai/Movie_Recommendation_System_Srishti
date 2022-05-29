@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="/static/style.css">
+<body>
+{% endblock body %}
+{% block content %}
+<div class="background-container">
+<div class="card"style="width: 25rem; margin-left:9%;">
+  <div class="card-body"style="background-color:rgb(175, 172, 172);">
+    <div class="login">
+      <h1>Login</h1>
+    <form method="POST">
+      {{form.hidden_tag()}}
+      <div class="mb-3">
+        {{form.username.label(class="form-label")}}
+        {{form.username(class="form-control")}}
+      </div>
+      <div class="mb-3">
+        {{form.password.label( class="form-label")}}
+        {{form.password(class="form-control")}}
+      </div>
+      <div class="mb-3 form-check">
+          {{form.remember.label( class="form-check-label")}}
+          {{form.remember()}}
+      </div>
+      
+      {% for message in get_flashed_messages() %}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  {{ message }}
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+      {% endfor %}
+
+      {{form.submit(class="btn btn-primary login-btn")}}
+      </form>
+      
+    </div> 
+  </div>
+  </div>
+</div> 
+</div>
+</body>
+</html>
+</head>
+{% endblock content %}

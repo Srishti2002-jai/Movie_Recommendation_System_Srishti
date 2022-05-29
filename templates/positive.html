@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block content %}
+ <link rel="stylesheet" href="/static/style2.css">   
+</head>
+<body>
+<div>
+    <h3>Recommendation for searched movie : {{movie_name}} </h3>
+
+  <div class="container" style="margin-left:13%;">
+      <div class="row">
+        {% for i in range(3):%}
+        <div class="card col-md-6 col-lg-4" style="width: 20rem;">
+          <img src="http://image.tmdb.org/t/p/w500{{movie[i].poster_path}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie_names[i] }}</h5>
+            <p class="card-text">{{overview[i]}}</p>
+            
+          </div>
+        </div>
+        {% endfor %}
+ 
+      </div>
+      <div class="row">
+        {% for i in range(3,6):%}
+        <div class="card col-md-6 col-lg-4" style="width: 20rem;">
+          <img src="http://image.tmdb.org/t/p/w500{{movie[i].poster_path}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie_names[i] }}</h5>
+            <p class="card-text">{{overview[i]}}</p>
+            
+          </div>
+        </div>
+        {% endfor %}
+ 
+      </div>
+    
+
+  </div>
+
+</body>
+
+</html>
+{% endblock content %}
